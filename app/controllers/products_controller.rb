@@ -1,9 +1,11 @@
 class ProductsController < ApplicationController
-  def all_products_method
+  def index
+    # show all products
     render json: Product.all.as_json
   end
 
-  def one_product_method
+  def show
+    # show one product
     render json: Product.find_by(id: params["id"]).as_json
   end
 end
