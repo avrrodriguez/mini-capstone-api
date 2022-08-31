@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Product.new(
+  name: "pencil",
+  price: 2,
+  image_url: "https://weareticonderoga.com/wp-content/uploads/2019/06/13308_GLAMOUR_2000X2000.png",
+  description: "yellow pencil, type 2, Ticonderoga",
+)
+
+Product.new(
+  name: "ruler",
+  price: 4,
+  image_url: "https://cdn5.vectorstock.com/i/1000x1000/79/69/ruler-vector-6227969.jpg",
+  description: "an orange ruler measuring up to 16 milimeteres",
+)
+
+Product.new(
+  name: "stapler",
+  price: 5,
+  image_url: "",
+  description: "",
+)
