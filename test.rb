@@ -11,6 +11,4 @@ data.each do |product|
   table << [product["id"], product["name"], product["price"]]
 end
 
-# render using tty-table
-renderer = TTY::Table::Renderer::Basic.new(table)
-renderer.render
+# TODO tty table
