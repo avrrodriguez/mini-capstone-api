@@ -1,0 +1,8 @@
+### Product Index Action
+GET http://localhost:3000/products.json
+
+### Product Show Action
+GET http://localhost:3000/products/3.json
+
+### Product Create Action
+POST http://localhost:3000/products.json
