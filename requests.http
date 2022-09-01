@@ -2,7 +2,7 @@
 GET http://localhost:3000/products.json
 
 ### Product Show Action
-GET http://localhost:3000/products/3.json
+GET http://localhost:3000/products/7.json
 
 ### Product Create Action
 POST http://localhost:3000/products.json
@@ -23,3 +23,7 @@ Content-Type: application/json
   "price": "5",
   "description": "Real cool stuff, you should buy it"
 }
+
+### Product Destroy Action
+DELETE  http://localhost:3000/products/7.json
+
