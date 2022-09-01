@@ -14,3 +14,12 @@ Content-Type: application/json
   "image_url": "test_url",
   "description": "test_description"
 }
+
+### Product Update Action
+PATCH http://localhost:3000/products/7.json
+Content-Type: application/json
+
+{
+  "price": "5",
+  "description": "Real cool stuff, you should buy it"
+}
