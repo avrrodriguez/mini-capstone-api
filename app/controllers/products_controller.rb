@@ -10,13 +10,12 @@ class ProductsController < ApplicationController
   end
 
   def create
-    product = Product.new(
-      name: "Eraser",
-      price: 1,
-      image_url: "https://www.quill.com/is/image/Quill/sp44335983_s7?$img400$",
-      description: "An eraser, used to erase pencil marks and others.",
+    product = Product.create(
+      name: params["name"],
+      price: params["price"].to_i,
+      image_url: params["image_url"],
+      description: params["description"],
     )
-    product.save
     render json: product.as_json
   end
 end
