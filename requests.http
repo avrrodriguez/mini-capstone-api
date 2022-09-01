@@ -26,4 +26,3 @@ Content-Type: application/json
 
 ### Product Destroy Action
 DELETE  http://localhost:3000/products/7.json
-
