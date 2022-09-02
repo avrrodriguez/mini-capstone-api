@@ -10,7 +10,7 @@ Content-Type: application/json
 
 {
   "name": "test_name",
-  "price": "3",
+  "price": 3,
   "image_url": "test_url",
   "description": "test_description"
 }
