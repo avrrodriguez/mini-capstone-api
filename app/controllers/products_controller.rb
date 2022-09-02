@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
   def index
     # show all products
-    render json: Product.all.as_json
+    products = Product.all
+    render json: products.as_json(methods: [:total])
   end
 
   def show
