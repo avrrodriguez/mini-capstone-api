@@ -35,3 +35,21 @@ Product.create(
 )
 
 puts "done"
+
+Supplier.create(
+  name: "GlassCo",
+  email: "glassco@test.com",
+  phone_number: "123-123-1245",
+)
+
+Supplier.create(
+  name: "OfficeInc",
+  email: "officeinc@test.com",
+  phone_number: "123-123-1245",
+)
+
+Supplier.create(
+  name: "CommonSuppliesInc",
+  email: "comsupinc@test.com",
+  phone_number: "123-123-1245",
+)
