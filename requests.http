@@ -25,3 +25,22 @@ Content-Type: application/json
 
 ### Product Destroy Action
 DELETE  http://localhost:3000/products/8.json
+
+### Supplier Index Action
+GET http://localhost:3000/suppliers.json
+
+### Supplier Show Action
+GET http://localhost:3000/suppliers/1.json
+
+### Supplier Create Action
+POST http://localhost:3000/suppliers.json
+Content-Type: application/json
+
+{
+  "name": "Awazon",
+  "email": "awazon@gmail.com",
+  "phone_number": "345-347-2375"
+}
+
+### Supplier Update Action
+PATCH http://localhost:3000/suppliers/4.json
