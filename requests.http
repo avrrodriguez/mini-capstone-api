@@ -16,12 +16,11 @@ Content-Type: application/json
 }
 
 ### Product Update Action
-PATCH http://localhost:3000/products/4.json
+PATCH http://localhost:3000/products/11.json
 Content-Type: application/json
 
 {
-  "price": 5,
-  "description": "Real cool stuff, you should buy it"
+  "image_url": "an_image.png"
 }
 
 ### Product Destroy Action
