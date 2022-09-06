@@ -27,12 +27,12 @@
 #   description: "black stapler",
 # )
 
-Product.create(
-  name: "donkey",
-  price: 4.234,
-  image_url: "Randome url",
-  description: "long winded description text",
-)
+# Product.create(
+#   name: "donkey",
+#   price: 4.234,
+#   image_url: "Randome url",
+#   description: "long winded description text",
+# )
 
 puts "done"
 
