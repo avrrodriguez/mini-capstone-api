@@ -5,6 +5,7 @@
   image_url: @product.image_url,
   description: @product.description,
   is_discounted?: @product.is_discounted?,
+  supplier: @product.supplier,
   tax: @product.tax,
   total: @product.total,
   created_at: @product.created_at,
