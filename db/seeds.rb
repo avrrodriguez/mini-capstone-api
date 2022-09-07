@@ -36,20 +36,55 @@
 
 puts "done"
 
-Supplier.create(
-  name: "GlassCo",
-  email: "glassco@test.com",
-  phone_number: "123-123-1245",
+# Supplier.create(
+#   name: "GlassCo",
+#   email: "glassco@test.com",
+#   phone_number: "123-123-1245",
+# )
+
+# Supplier.create(
+#   name: "OfficeInc",
+#   email: "officeinc@test.com",
+#   phone_number: "123-123-1245",
+# )
+
+# Supplier.create(
+#   name: "CommonSuppliesInc",
+#   email: "comsupinc@test.com",
+#   phone_number: "123-123-1245",
+# )
+
+Image.create(
+  url: "https://m.media-amazon.com/images/I/61t4X53UwoL._AC_SL1500_.jpg",
+  product_id: 3,
 )
 
-Supplier.create(
-  name: "OfficeInc",
-  email: "officeinc@test.com",
-  phone_number: "123-123-1245",
+Image.create(
+  url: "https://media.accobrands.com/media/560-560/400345.jpg?width=1360px&height=898px",
+  product_id: 3,
 )
 
-Supplier.create(
-  name: "CommonSuppliesInc",
-  email: "comsupinc@test.com",
-  phone_number: "123-123-1245",
+Image.create(
+  url: "https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/908194/908194_o51_et_8038392/908194",
+  product_id: 3,
+)
+
+Image.create(
+  url: "https://images.ctfassets.net/f1fikihmjtrp/46vOKllYdc1eEGZKXO5eS2/6387e4664ee704658d0b183444c12b52/20305-single-3ww-l.jpg",
+  product_id: 1,
+)
+
+Image.create(
+  url: "https://weareticonderoga.com/wp-content/uploads/2019/06/13308_GLAMOUR_2000X2000.png",
+  product_id: 1,
+)
+
+Image.create(
+  url: "https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/724522/724522_o03_rlr_6_in_blu_100714/724522",
+  product_id: 2,
+)
+
+Image.create(
+  url: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Office-pink-erasers.jpg",
+  product_id: 5,
 )
