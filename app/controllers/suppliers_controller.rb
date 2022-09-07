@@ -1,11 +1,11 @@
 class SuppliersController < ApplicationController
   def index
-    render json: Supplier.all.as_json
+    render json: Supplier.all.as_json(:methods[:products])
   end
 
   def show
     supplier = Supplier.find(params[:id])
-    render json: supplier.as_json
+    render json: supplier.as_json(:methods[:products])
   end
 
   def create

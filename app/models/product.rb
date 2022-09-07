@@ -2,6 +2,8 @@ class Product < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :price, presence: true, numericality: { greater_than: 0 }
   validates :description, length: { minimum: 10, maximum: 500 }
+  belongs_to :supplier
+  has_many :images
 
   def is_discounted?
     price < 10
@@ -13,22 +15,5 @@ class Product < ApplicationRecord
 
   def total
     price + tax
-  end
-
-  def supplier
-    Supplier.find_by(id: supplier_id)
-  end
-
-  def images
-    Image.where(product_id: id)
-  end
-
-  def add_images(url)
-    image = Image.new(
-      url: url,
-      product_id: id,
-    )
-    image.save
-    return image
   end
 end
