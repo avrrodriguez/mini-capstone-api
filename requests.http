@@ -9,10 +9,10 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "test_name",
-  "price": 3,
-  "image_url": "test_url",
-  "description": "test_description"
+  "name": "Sharpie",
+  "price": 1,
+  "description": "A black marker than can be used to go over mistakes and not show them or write in big fonts.",
+  "supplier_id": 2
 }
 
 ### Product Update Action

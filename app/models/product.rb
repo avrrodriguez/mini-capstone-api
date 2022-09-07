@@ -22,4 +22,13 @@ class Product < ApplicationRecord
   def images
     Image.where(product_id: id)
   end
+
+  def add_images(url)
+    image = Image.new(
+      url: url,
+      product_id: id,
+    )
+    image.save
+    return image
+  end
 end

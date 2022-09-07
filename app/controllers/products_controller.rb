@@ -16,7 +16,6 @@ class ProductsController < ApplicationController
       name: params["name"],
       price: params["price"],
       description: params["description"],
-      quantity: params["quantity"],
       supplier_id: params["supplier_id"],
     )
 
@@ -33,7 +32,6 @@ class ProductsController < ApplicationController
     @product.name = params["name"] || @product.name
     @product.price = params["price"] || @product.price
     @product.description = params["description"] || @product.description
-    @product.quantity = params["quantity"] || @product.quantity
     @product.supplier_id = params["supplier_id"] || @product.supplier_id
 
     if @product.save
