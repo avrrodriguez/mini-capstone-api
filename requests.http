@@ -58,6 +58,9 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
+### Order Index Action
+GET http://localhost:3000/orders.json
+
 ### Order Show Action
 GET http://localhost:3000/orders/1.json
 

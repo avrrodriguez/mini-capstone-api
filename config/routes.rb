@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   patch "/suppliers/:id", controller: "suppliers", action: "update"
 
   # Order routes
+  get "/orders", controller: "orders", action: "index"
   get "/orders/:id", controller: "orders", action: "show"
   post "/orders", controller: "orders", action: "create"
 
