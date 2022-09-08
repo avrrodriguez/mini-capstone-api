@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   get "/suppliers/:id", controller: "suppliers", action: "show"
   post "/suppliers", controller: "suppliers", action: "create"
   patch "/suppliers/:id", controller: "suppliers", action: "update"
+
+  # User routes
+  post "/users", controller: "users", action: "create"
 end

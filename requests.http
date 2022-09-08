@@ -44,3 +44,15 @@ Content-Type: application/json
 
 ### Supplier Update Action
 PATCH http://localhost:3000/suppliers/4.json
+
+
+### Users create (Signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Bob",
+  "email": "bob@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
