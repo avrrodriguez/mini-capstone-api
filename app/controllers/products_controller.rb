@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def index
     # show all products
+    pp current_user
     @products = Product.all
     render template: "products/index"
   end

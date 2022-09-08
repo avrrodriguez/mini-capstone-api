@@ -1,5 +1,6 @@
 ### Product Index Action
 GET http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI3NDI3MzF9.kPH1qQRtYsi6KcgfDHPk9v2J6M5rqM1dVN_-er7HE58
 
 ### Product Show Action
 GET http://localhost:3000/products/3.json
@@ -46,7 +47,7 @@ Content-Type: application/json
 PATCH http://localhost:3000/suppliers/4.json
 
 
-### Users create (Signup)
+### Users Create (Signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
@@ -55,4 +56,13 @@ Content-Type: application/json
   "email": "bob@test.com",
   "password": "password",
   "password_confirmation": "password"
+}
+
+### Sessions Create Action
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "bob@test.com",
+  "password": "password"
 }

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post "/suppliers", controller: "suppliers", action: "create"
   patch "/suppliers/:id", controller: "suppliers", action: "update"
 
-  # User routes
+  # Authentication routes
   post "/users", controller: "users", action: "create"
+  post "/sessions", controller: "sessions", action: "create"
 end
