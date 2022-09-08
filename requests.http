@@ -58,6 +58,17 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
+### Order Show Action
+GET http://localhost:3000/orders/1.json
+
+### Order Create Action
+POST http://localhost:3000/orders.json
+# Content-Type: application/json
+
+# {
+
+# }
+
 ### Sessions Create Action
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
