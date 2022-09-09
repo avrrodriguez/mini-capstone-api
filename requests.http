@@ -60,17 +60,21 @@ Content-Type: application/json
 
 ### Order Index Action
 GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkwMDB9.ZfONEMGoQJIN6ibC7zWsUJAjAQVXEcU-qisuULaGqlY
 
 ### Order Show Action
-GET http://localhost:3000/orders/1.json
+GET http://localhost:3000/orders/3.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkwMDB9.ZfONEMGoQJIN6ibC7zWsUJAjAQVXEcU-qisuULaGqlY
 
 ### Order Create Action
 POST http://localhost:3000/orders.json
-# Content-Type: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkwMDB9.ZfONEMGoQJIN6ibC7zWsUJAjAQVXEcU-qisuULaGqlY
 
-# {
-
-# }
+{
+  "product_id": 1,
+  "quantity": 1
+}
 
 ### Sessions Create Action
 POST http://localhost:3000/sessions.json

@@ -1,35 +1,37 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user
+
   def index
-    if current_user
-      orders = Order.all
-      render json: orders.as_json
-    end
+    orders = current_user.orders
+    render json: orders.as_json(methods: [:product])
   end
 
   def show
-    if current_user
-      order = Order.find_by(id: params["id"])
-      render json: order.as_json
+    order = Order.find_by(id: params["id"])
+    if current_user.id == order.user_id
+      render json: order.as_json(methods: [:product])
+    else
+      render json: { message: "You are not authorized to view this page." }, status: :unauthorized
     end
   end
 
   def create
-    # code is broken in front end, probably around here, also the show and index authentication might not be good either
+    product = Product.find_by(id: params["product_id"])
+    subtotal = product.price * params["quantity"].to_i
+    tax = product.tax * params["quantity"].to_i
 
-    if current_user
-      order = Order.new(
-        user_id: current_user.id,
-        product_id: 1,
-        quantity: 1,
-        subtotal: Product.find_by(id: params["id"]).price * quantity,
-        tax: Product.find_by(id: params["id"]).tax * quantity,
-        total: subtotal + tax,
-      )
-      if order.save
-        render json: order.as_json
-      else
-        render json: { errors: order.errors.full_messages }
-      end
+    order = Order.new(
+      user_id: current_user.id,
+      product_id: params["product_id"],
+      quantity: params["quantity"],
+      subtotal: subtotal,
+      tax: tax,
+      total: subtotal + tax,
+    )
+    if order.save
+      render json: order.as_json
+    else
+      render json: { errors: order.errors.full_messages }
     end
   end
 end
