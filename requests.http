@@ -1,12 +1,12 @@
 ### Product Index Action
 GET http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI3NDI3MzF9.kPH1qQRtYsi6KcgfDHPk9v2J6M5rqM1dVN_-er7HE58
 
 ### Product Show Action
 GET http://localhost:3000/products/3.json
 
 ### Product Create Action
 POST http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkwMDB9.ZfONEMGoQJIN6ibC7zWsUJAjAQVXEcU-qisuULaGqlY
 Content-Type: application/json
 
 {
@@ -18,6 +18,7 @@ Content-Type: application/json
 
 ### Product Update Action
 PATCH http://localhost:3000/products/11.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkwMDB9.ZfONEMGoQJIN6ibC7zWsUJAjAQVXEcU-qisuULaGqlY
 Content-Type: application/json
 
 {
@@ -25,7 +26,8 @@ Content-Type: application/json
 }
 
 ### Product Destroy Action
-DELETE  http://localhost:3000/products/8.json
+DELETE  http://localhost:3000/products/13.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjI4MzYzMTR9.3pKW2iBaSrzgJfiKDuPJIYJSWZLjpDzllhHXJf5l7rM
 
 ### Supplier Index Action
 GET http://localhost:3000/suppliers.json
@@ -52,15 +54,16 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Bob",
-  "email": "bob@test.com",
+  "name": "Wally",
+  "email": "wally@test.com",
   "password": "password",
-  "password_confirmation": "password"
+  "password_confirmation": "password",
+  "admin": true
 }
 
 ### Order Index Action
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkwMDB9.ZfONEMGoQJIN6ibC7zWsUJAjAQVXEcU-qisuULaGqlY
+Authorization: Bearer 
 
 ### Order Show Action
 GET http://localhost:3000/orders/3.json
@@ -81,6 +84,6 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "bob@test.com",
+  "email": "wally@test.com",
   "password": "password"
 }
