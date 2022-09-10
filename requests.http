@@ -1,3 +1,6 @@
+@customer = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MzY4MTN9.cNxWWxqm3329tsFTTgPpPzMyi-dN30JRtW0WJnBImHE
+@admin = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjI4MzY4NjZ9.zzMZ-LY0VHmjT67Sd8HgFqajaF2tMBMAvAEUepK7ZFw
+
 ### Product Index Action
 GET http://localhost:3000/products.json
 
@@ -6,7 +9,7 @@ GET http://localhost:3000/products/3.json
 
 ### Product Create Action
 POST http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkwMDB9.ZfONEMGoQJIN6ibC7zWsUJAjAQVXEcU-qisuULaGqlY
+Authorization: Bearer {{customer}}
 Content-Type: application/json
 
 {
@@ -17,17 +20,17 @@ Content-Type: application/json
 }
 
 ### Product Update Action
-PATCH http://localhost:3000/products/11.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkwMDB9.ZfONEMGoQJIN6ibC7zWsUJAjAQVXEcU-qisuULaGqlY
+PATCH http://localhost:3000/products/1.json
+Authorization: Bearer {{admin}}
 Content-Type: application/json
 
 {
-  "image_url": "an_image.png"
+  "price": 3
 }
 
 ### Product Destroy Action
 DELETE  http://localhost:3000/products/13.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjI4MzYzMTR9.3pKW2iBaSrzgJfiKDuPJIYJSWZLjpDzllhHXJf5l7rM
+Authorization: Bearer {{admin}}
 
 ### Supplier Index Action
 GET http://localhost:3000/suppliers.json
@@ -63,16 +66,16 @@ Content-Type: application/json
 
 ### Order Index Action
 GET http://localhost:3000/orders.json
-Authorization: Bearer 
+
 
 ### Order Show Action
 GET http://localhost:3000/orders/3.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkwMDB9.ZfONEMGoQJIN6ibC7zWsUJAjAQVXEcU-qisuULaGqlY
+Authorization: Bearer {{customer}}
 
 ### Order Create Action
 POST http://localhost:3000/orders.json
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjI4MjkwMDB9.ZfONEMGoQJIN6ibC7zWsUJAjAQVXEcU-qisuULaGqlY
+Authorization: Bearer {{customer}}
 
 {
   "product_id": 1,
