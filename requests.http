@@ -2,7 +2,7 @@
 @admin = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjI4MzY4NjZ9.zzMZ-LY0VHmjT67Sd8HgFqajaF2tMBMAvAEUepK7ZFw
 
 ### Product Index Action
-GET http://localhost:3000/products.json
+GET http://localhost:3000/products.json?category=Office Tools
 
 ### Product Show Action
 GET http://localhost:3000/products/3.json
