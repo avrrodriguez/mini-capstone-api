@@ -4,7 +4,7 @@ class Product < ApplicationRecord
   validates :description, length: { minimum: 10, maximum: 500 }
   belongs_to :supplier
   has_many :images
-  has_many :orders
+  has_many :carted_products
   has_many :category_products
   has_many :categories, through: :category_products
 
