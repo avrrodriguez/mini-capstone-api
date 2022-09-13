@@ -18,7 +18,7 @@ class CartedProductsController < ApplicationController
 
   def index
     if current_user
-      cart = User.find_by(id: current_user.id).carted_products.find_by(status: "carted")
+      cart = current_user.carted_products.where(status: "carted")
 
       render json: cart.as_json
     end
