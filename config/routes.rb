@@ -17,6 +17,10 @@ Rails.application.routes.draw do
   get "/orders/:id", controller: "orders", action: "show"
   post "/orders", controller: "orders", action: "create"
 
+  # Carted Product routes
+  post "/carted_products", controller: "carted_products", action: "create"
+  get "/carted_products", controller: "carted_products", action: "index"
+
   # Authentication routes
   post "/users", controller: "users", action: "create"
   post "/sessions", controller: "sessions", action: "create"
