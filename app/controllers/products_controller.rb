@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   def index
     # show all products
     @products = Product.all
+    @products = @products.sort_by { |obj| obj.id }
     if params["category"]
       query = params["category"]
       @products = Category.find_by(name: query).products
